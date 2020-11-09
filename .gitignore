@@ -1,0 +1,10 @@
+.idea
+.vscode
+node_modules
+/assets
+tailwind-example.js
+tailwind.js
+webpack.mix.js
+local.json
+package-lock.json
+package.json
