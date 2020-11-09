@@ -42,9 +42,9 @@ mix.purgeCss({
         path.join(__dirname, 'inc/*.php'),
         path.join(__dirname, 'build/js/**/*.js'),
     ]),
-    whitelist: ['current-menu-item' ],
+    whitelist: ['current-menu-item' ,'h4'],
     // whitelistPatterns: [/^search-/],
-    whitelistPatternsChildren: [/^search-/,/^rslides_nav/, /^wp-block/,/^marca-social/,/^qubely-/,/^woocommerce/,/^products/, /^woocommerce-/,/^table/,/^single-product/,/^woocommerce-account/,/^post-type-archive-product/,/^tax-product_cat/,/^page-id-3/,/^privacy-policy/]
+    whitelistPatternsChildren: [/^search-/,/^rslides_nav/, /^wp-block/,/^marca-social/,/^qubely-/,/^woocommerce/,/^products/, /^woocommerce-/,/^table/,/^single-product/]
 });
 
 // if (mix.inProduction()) {

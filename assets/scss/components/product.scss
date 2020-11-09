@@ -28,9 +28,11 @@ ul.products{
         img{
             @apply  m-auto  w-full ;    
         }
+
+         
         .dcms-item-description{
             @apply text-title px-2-1 pt-5;
-            h4{
+        & h4{
                 @apply  font-normal tracking-normal ;
                 @screen lg{
                     @apply  text-dct;
@@ -38,6 +40,8 @@ ul.products{
                 
             }
         }  
+
+        
         h2{ 
             @apply  pt-4 px-2-1 m-0 text-xs font-normal  text-title leading-5  uppercase ;  
             @screen maxsm{
@@ -132,3 +136,4 @@ ul.products{
     }
     
 }
+
