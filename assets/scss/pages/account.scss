@@ -1,0 +1,324 @@
+.woocommerce-account.logged-in{
+    main{
+        .woocommerce{
+            @apply grid grid-cols-7  gap-6 mt-8  mb-8; 
+           .woocommerce-MyAccount-navigation{
+               @apply col-span-7 ; 
+               @screen md{
+                   @apply  col-span-2; 
+               }
+               ul{
+                   @apply   border border-gray-400 p-6 my-0;  
+                   li{
+                       @apply  border-b  border-gray-200 px-3 ; 
+                       &:hover{
+                           @apply bg-gray-200 rounded-md text-secondary-500 ; 
+                       }
+                       a{
+                           @apply block py-4;
+                       }
+       
+                   }
+                   li:last-child{
+                       @apply  border-b-0 ; 
+       
+                   }
+               }
+           }
+           .woocommerce-MyAccount-content{
+               @apply col-span-7 ; 
+               @screen md{
+                   @apply  col-span-5; 
+               }  
+               .woocommerce-orders-table.shop_table{
+                   @apply w-full ; 
+                   @screen maxsm {
+                      @apply block;  
+                        
+                   }
+                   thead{ 
+                       @screen maxsm {
+                           @apply  hidden ;   
+                        }
+                       tr{
+                           th{
+                               @apply  py-4 text-left px-4  ;
+       
+                           }
+                       }
+                   }
+                   tbody{
+                       @apply  pt-6 ;
+                       @screen maxsm {
+                           @apply block; 
+                             
+                        }
+                       tr{
+                           @apply  border-t border-gray-400 ;
+                           @screen maxsm {
+                               @apply  block ;  
+                                 
+                            }
+                           td{
+                               @apply p-4 ; 
+                               @screen maxsm {
+                                   @apply  block text-right  ; 
+                                    
+                                }
+                                &.woocommerce-orders-table__cell-order-actions{
+                                    a{
+                                       @include btnSimple;
+                                       @apply whitespace-no-wrap inline-block mb-2 ; 
+                                       @screen maxsm {
+                                           @apply  mr-0 ml-2 ; 
+                                       
+                                       }
+                                       &::before{
+                                           @include fontawasome(\f06e);  
+                                       }
+                                    }
+                                }
+                               &.actions{
+                                   @apply text-right;
+       
+                                   .coupon{ 
+                                       @apply float-left hidden;
+                                       @screen maxsm {
+                                           @apply  float-none ;   
+                                        }
+                                        input{
+                                           @screen maxsm {
+                                               @apply  block mb-3 w-full ;   
+                                            }
+                                        }
+                                       label{
+                                           @apply absolute ;  
+                                           clip: rect(1px, 1px, 1px, 1px); 
+                                           clip-path: inset(50%);
+                                       }
+                                       .button{
+                                           @apply  text-white leading-6;
+                                            background: rgba($primary,0.70) ;
+       
+                                       }
+                                   }
+                                   .button{ 
+                                       @apply  text-white leading-6;
+                                       background: rgba($primary,0.70) ;
+                                       @screen maxsm {
+                                           @apply  mt-2 ;   
+                                        }
+                                   }
+                               }
+       
+                           }
+                       }
+       
+                   }
+                   
+                   & tr td[data-title]::before{
+                       @screen maxsm {
+                           content: attr(data-title) ": ";
+                           font-weight: 600;
+                           float: left;  
+                       }
+                   }
+                } 
+               .woocommerce-EditAccountForm.edit-account,.woocommerce-address-fields__field-wrapper{
+                   @apply grid grid-cols-1 col-gap-8  ;
+                   .clear{
+                       @apply  hidden ; 
+       
+                   }
+                   @screen sm{
+                       @apply  grid-cols-2; 
+                   }
+                   .form-row{
+                       @apply my-0 ; 
+                       label{
+                           @apply pb-1 inline-block; 
+                       }
+                   }
+                   label{
+                       @apply pb-1 pt-4 inline-block; 
+                   }
+                   .input-text {
+                       @apply w-full block;
+                       font-family: Roboto;
+       
+                   }
+                   em{
+                       @apply text-sm ;
+       
+                   }
+                   fieldset{
+                       @apply p-0 mt-5; 
+                   }
+                   #billing_address_2_field{
+                       @apply flex items-end;
+                       @screen maxmd{
+                           @apply mt-3;
+                       }
+                       span{
+                           @apply  w-full; 
+                       }
+                   }
+                   .validate-email{ 
+                           @apply mb-3; 
+                   }
+               }
+               .woocommerce-Addresses {
+                   @apply grid grid-cols-1 row-gap-6 ;  
+                   h3{
+                    @apply mb-2 ; 
+                       
+                   }
+                   a{
+                       @apply  mr-2 py-1 px-3 rounded-full border border-gray-300;
+       
+                   }
+               }
+               h2{
+                   @apply mb-2;
+               }
+               mark{
+                  @apply bg-transparent font-semibold text-black; 
+               }
+               .woocommerce-Address{
+                   .woocommerce-Address-title{
+                       h3{
+                           @apply mb-2;
+                       }
+                       a{
+                           @include btnSimple;
+                           &::before{ 
+                               @include fontawasome(\f304);   
+                           }
+                           @apply mb-3;
+                       } 
+           
+                   }
+                   address{
+                       @apply mt-3;
+                   }
+               }
+              
+               .woocommerce-table.order_details{ 
+                       @apply  w-full ; 
+       
+                       thead{
+                       tr{
+                           th{
+                               &.product-name{
+                                   @apply  text-left ;
+                               }
+                               &.product-total{
+                                   @apply  text-right ; 
+                               }
+                           } 
+                       }            
+                       }
+                       tbody{
+                       & > tr{ 
+                               @apply  border-b border-t border-gray-400 leading-10 ; 
+                               td{
+                                   &.product-name{
+                                       @apply  text-left leading-6 py-2;
+                                   }
+                                   &.product-total{
+                                       @apply  text-right ; 
+                                   } 
+                               }
+                               &.order-total{
+                                   td{
+                                       .woocommerce-Price-amount{
+                                           @apply font-semibold text-xl text-primary-500 ;  
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                       tfoot{
+                           @apply   pt-4 ;  
+                           & > tr{ 
+                               @apply  border-b border-t border-gray-400 ;
+                               line-height: 3.5em; 
+                                th{
+                                   @apply   text-left ; 
+       
+                                }
+                               td{
+                                   @apply  text-right ;  
+                               }
+                               &.woocommerce-shipping-totals.shipping{
+                                   td{
+                                       @apply  py-2 ;
+                                   }
+                                   ul li, td{
+                                       @apply  leading-6 ;   
+                                   }
+                               }   
+                               &.order-total{
+                                   th{
+                                       @apply uppercase ;  
+                                   }
+                                   td{
+                                       .woocommerce-Price-amount{
+                                           @apply font-semibold text-xl text-primary-500 ;  
+                                       }
+                                   }
+                               }
+                           } 
+                       }  
+               }
+           } 
+        }
+    }
+}
+
+
+
+/* purgecss start ignore */ 
+.woocommerce-MyAccount-navigation ul li a::before{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    float: right; 
+    font-family: "Font Awesome 5 Free"; 
+    
+  }
+  
+  .woocommerce-MyAccount-navigation-link.is-active{ 
+    color: $secondary;
+  }
+  
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard a::before{ 
+    font-weight: 900; 
+    content: "\f108";
+    
+  
+  }
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--orders a::before{ 
+    font-weight: 900; 
+    content: "\f218";
+  }
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--downloads a::before{ 
+    font-weight: 900; 
+    content: "\f019";
+    
+  }
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-address a::before{
+    font-weight: 900; 
+    content: "\e065";
+  }
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--edit-account a::before{
+    font-weight: 400; 
+    content: "\f007";
+  }
+  .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a::before{
+    font-weight: 900; 
+    content: "\f2f5";
+  }
+  /* purgecss end ignore */

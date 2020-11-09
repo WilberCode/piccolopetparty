@@ -1,0 +1,40 @@
+/* purgecss start ignore */ 
+// form
+.everest{
+    &-forms{
+        @apply py-8 max-w-xl m-auto ;  
+        .everest-forms-notice{
+           @apply   bg-secondary-500 ;
+            
+        } 
+        .evf{
+            &-container{
+                @apply mb-0 #{!important}; 
+            }
+            &-frontend{ 
+                &-row{
+                    @apply m-0 #{!important};
+                }
+                &-grid{ 
+                    @apply  pb-1 px-0 grid grid-cols-1 row-gap-3  #{!important}; 
+                    input,textarea{ 
+                        @apply  text-gray-700 border border-gray-300 rounded py-3 px-4 leading-6 #{!important}; 
+                        &::placeholder{
+                         @apply  tracking-widest  #{!important}; 
+                        }
+                    }  
+                }
+            }
+            &-submit-container{
+                @apply mt-0 ;
+                button{ 
+                    @apply bg-primary-500 text-white  rounded-none font-normal py-3 px-5 border-none  inline-block  text-base text-center leading-6 #{!important};  
+
+                }
+            }
+            
+        } 
+    }
+   
+}
+ /* purgecss end ignore */

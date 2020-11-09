@@ -1,0 +1,22 @@
+.woocommerce-account{
+    h2{
+        @apply  text-center mt-8  uppercase font-semibold text-lg ;  
+
+    }
+    .woocommerce-form-login,.woocommerce-form-register {
+        @apply max-w-lg m-auto mt-8 mb-12; 
+        .form-row {
+            @apply block mt-4 mb-0 ;
+            label{
+                @apply block;
+            }
+            input[type="text"],input[type="password"],input[type="email"]{
+
+                @apply block w-full mt-2;
+            }
+            .woocommerce-form__input-checkbox{
+                appearance: auto;
+            } 
+        }
+    }
+}

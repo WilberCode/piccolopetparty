@@ -1,0 +1,82 @@
+.search{
+    &-form{
+        position:relative;
+        span{
+            display: none;
+        }
+        label{ 
+        
+        } 
+        &::after { 
+            content: '';
+            position: absolute;
+            background-image: url('../svg/search.svg');
+            background-size: contain; 
+            width: 22px;
+            height: 22px;
+            @apply text-gray-500; 
+            right:1em;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat; 
+        } 
+        
+    }
+    &-field{ 
+        @apply w-full shadow-md text-gray-800;
+        padding: .5em;
+        padding-right:2.6em;
+        border-radius: 4px; 
+        outline: none;  
+        font-size: 18px; 
+        background: #ffffff;  
+        margin: auto;  
+        &::placeholder {
+            @apply text-gray-500;
+        }
+    }
+    &-submit{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        opacity: 0;
+        z-index:40; 
+    }
+} 
+  /* purgecss start ignore */ 
+.dgwt-wcas-sf{
+    &-wrapp{
+        &::before{
+            content: '';
+            background-image: url(../svg/search.svg);
+            width: 19.724px;
+            height:19.721px;
+            @apply bg-no-repeat absolute; 
+            left: 12px; 
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        svg{
+            @apply  hidden;
+
+        }
+        & input[type=search].dgwt-wcas-search-input{
+           @apply bg-gray-200 border-0 rounded-full font-roboto ;
+           @screen md{
+             height: 42px;
+           }
+           &::placeholder{
+            @apply  not-italic ;
+           }
+           &:focus{
+             @apply border border-gray-300 shadow-none;
+           }
+       }
+   } 
+}  
+ 
+/* purgecss end ignore */

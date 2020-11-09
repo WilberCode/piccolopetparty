@@ -1,0 +1,5 @@
+.post-type-archive-product {
+    .woocommerce-breadcrumb, .woocommerce-products-header__title{
+        @apply hidden;
+    } 
+} 
