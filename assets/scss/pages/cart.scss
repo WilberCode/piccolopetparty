@@ -1,0 +1,216 @@
+.woocommerce-cart{  
+    .main{
+        @apply pt-10 pb-10;
+        .woocommerce{
+            @apply grid grid-cols-4 gap-10;
+            &-notices-wrapper{
+                @apply  col-span-4;
+                
+            }
+            .cart-empty{
+                @apply   inline-block ; 
+                @screen maxsm{
+                    @apply   ml-0  col-span-4 ;
+                 }
+            }
+            .return-to-shop{
+                @screen maxsm{
+                    @apply     col-span-4  ;
+                 }
+            }
+            &-cart-form{
+                 @apply   col-span-4 ;
+                 @screen lg{
+                    @apply   col-span-3 ;
+                 }
+                 .shop_table{
+                    @apply w-full ; 
+                    @screen maxsm {
+                       @apply block;  
+                         
+                    }
+                    thead{ 
+                        @screen maxsm {
+                            @apply  hidden ;   
+                         }
+                        tr{
+                            th{
+                                @apply  py-4 text-left px-4  ;
+
+                            }
+                        }
+                    }
+                    tbody{
+                        @apply  pt-6 ;
+                        @screen maxsm {
+                            @apply block; 
+                              
+                         }
+                        tr{
+                            @apply  border-t border-gray-400 ;
+                            @screen maxsm {
+                                @apply  block ;  
+                                  
+                             }
+                            td{
+                                @apply p-4 ; 
+                                @screen maxsm {
+                                    @apply  block text-right  ; 
+                                     
+                                 }
+                                &.product-remove a{
+                                    @apply text-primary-500 text-lg w-5 h-5 inline-flex items-center justify-center rounded-full border border-primary-500; 
+                                }
+                                img{
+                                    @apply p-4 w-62;
+                                    @screen maxsm {
+                                        @apply  mx-auto;  
+                                        @apply  w-32;
+                                     }
+                                    
+                                }
+                                &.product-name{
+                                    @apply font-medium ; 
+                                    @screen md{
+                                        @apply  text-sm ; 
+ 
+                                    }
+
+                                }
+                                .quantity{
+                                    label{
+                                       @apply border-0 absolute ;  
+                                        clip: rect(1px, 1px, 1px, 1px); 
+                                        clip-path: inset(50%);
+                                        height: 1px;
+                                        margin: -1px;
+                                        overflow: hidden;
+                                        padding: 0; 
+                                        width: 1px; 
+                                    }
+                                    input{
+                                       @apply w-20 ;  
+                                        
+                                    }
+                                }
+                                &.actions{
+                                    @apply text-right;
+
+                                    .coupon{ 
+                                        @apply float-left hidden;
+                                        @screen maxsm {
+                                            @apply  float-none ;   
+                                         }
+                                         input{
+                                            @screen maxsm {
+                                                @apply  block mb-3 w-full ;   
+                                             }
+                                         }
+                                        label{
+                                            @apply absolute ;  
+                                            clip: rect(1px, 1px, 1px, 1px); 
+                                            clip-path: inset(50%);
+                                        }
+                                        .button{
+                                            @apply  text-white leading-6;
+                                             background: rgba($primary,0.70) ;
+
+                                        }
+                                    }
+                                    .button{ 
+                                        @apply  text-primary-500 leading-6 border-primary-500 border border-solid bg-white ; 
+                                        @screen maxsm {
+                                            @apply  mt-2 ;   
+                                         }
+                                    }
+                                }
+
+                            }
+                        }
+
+                    }
+                    
+                    & tr td[data-title]::before{
+                        @screen maxsm {
+                            content: attr(data-title) ": ";
+                            font-weight: 600;
+                            float: left;  
+                        }
+                    }
+                 } 
+                
+            }
+            .cart{
+                &-collaterals{
+                    @apply   col-span-4   ;
+                    @screen lg{
+                        @apply   col-span-1   ;
+                    }
+                }
+                &_totals{
+                    @apply   border border-gray-400 p-6 ;
+                    h2{
+                        @apply  mb-5 uppercase font-semibold text-lg ; 
+                    }
+                    table{
+                        @apply  w-full ; 
+
+                      tbody{
+                        & > tr{ 
+                                @apply  border-b border-t border-gray-400 leading-10 ;
+                                th{
+                                    @apply  text-left ;
+
+                                }
+                                td{
+                                    @apply  text-right ; 
+                                    @screen maxsm{
+                                        @apply  block   ;
+                                    }
+                                    ul,p{
+                                        @apply m-0;
+                                    }
+                                }
+                                &.woocommerce-shipping-totals.shipping{
+                                    ul{
+                                        li{
+                                            @apply  leading-6 ;
+                                            @screen md{
+                                                @apply  text-sm;
+                                            }
+                                        }
+                                    }
+                                    p{
+                                        @apply  leading-6 ;
+                                        @screen md{
+                                            @apply  text-sm;
+                                        }
+
+                                    }
+                                }  
+                                & .woocommerce-shipping-calculator{
+                                    input{
+                                        @apply w-full;
+                                    }
+                                }
+                                &.order-total{
+                                    td{
+                                        .woocommerce-Price-amount{
+                                            @apply font-semibold text-xl text-primary-500 ;  
+                                        }
+                                    }
+                                }
+                          }
+                      }
+                    }
+                    .wc-proceed-to-checkout{
+                       a{
+                        @include btn;
+                        @apply w-full bg-primary-500 text-white text-lg mt-6 ; 
+                       }
+                    }
+                }
+            }
+        }
+    }
+}
