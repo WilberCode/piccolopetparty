@@ -80,7 +80,7 @@ module.exports = {
                     500: '#FF4300', 
                 },
                 secondary: { 
-                    500: '#00b4d5',  
+                    500: '#FF4300',  
                 }
             }, 
             fontSize: {
