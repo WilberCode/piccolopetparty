@@ -41,7 +41,7 @@ Meat Fest, Carnes, Gourmet, Piel Seca, Experiencia, Vinos, Meditación">
 
     <?php //if(is_product_taxonomy('pigeon')){?>
        
-        
+          
     <?php //} ?> 
 </head>
 <body <?php body_class()  ?>  > 
