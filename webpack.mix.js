@@ -44,7 +44,7 @@ mix.purgeCss({
     ]),
     whitelist: ['current-menu-item' ,'h4'],
     // whitelistPatterns: [/^search-/],
-    whitelistPatternsChildren: [/^search-/,/^rslides_nav/, /^wp-block/,/^marca-social/,/^qubely-/,/^woocommerce/,/^products/, /^woocommerce-/,/^table/,/^single-product/]
+    whitelistPatternsChildren: [/^search-/,/^rslides_nav/, /^wp-block/,/^marca-social/,/^qubely-/,/^woocommerce/,/^products/, /^woocommerce-/,/^table/,/^single-product/,/^privacy-policy/]
 });
 
 // if (mix.inProduction()) {
