@@ -1,0 +1,37 @@
+
+@import "~tailwindcss/base"; 
+@import "~tailwindcss/components";  
+@import "~tailwindcss/utilities";  
+// Custom styles 
+@import "lib/font"; 
+@import "lib/fontawesome/css/all.min.scss"; 
+@import "partials/base";
+@import "partials/variables";
+@import "partials/hacks"; 
+@import "lib/mixins";  
+ 
+@import "components/button";
+@import "components/product";
+@import "components/pagination"; 
+@import "components/notice";
+
+@import "components/search-form"; 
+@import "components/input";  
+
+@import "layout/header"; 
+@import "layout/footer"; 
+
+@import "pages/front-page"; 
+@import "pages/cart"; 
+@import "pages/checkout"; 
+@import "pages/products"; 
+@import "pages/single-product"; 
+@import "pages/account";
+@import "pages/login"; 
+@import "pages/page"; 
+@import "pages/archive-product";  
+@import "pages/privacy-policy";  
+@import "pages/order-pay";  
+@import "pages/order-received";  
+@import "pages/contact";  
+ 
