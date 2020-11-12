@@ -32,16 +32,16 @@ Meat Fest, Carnes, Gourmet, Piel Seca, Experiencia, Vinos, Meditación">
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '356199811610428');
     fbq('track', 'PageView');
-    </script>
+    </script> 
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2685036135041369&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=356199811610428&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
 
 
     <?php //if(is_product_taxonomy('pigeon')){?>
        
-          
+        
     <?php //} ?> 
 </head>
 <body <?php body_class()  ?>  > 
