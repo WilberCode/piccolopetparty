@@ -111,8 +111,7 @@ remove_action('woocommerce_shop_loop_item_title','woocommerce_template_loop_prod
 // Agregara distritos a Woocommerce
 add_filter( 'woocommerce_states','goowoo_add_states' );
 function goowoo_add_states( $states ){
-	$states['PE'] = array(
-		'SC' =>__('SIN COSTO DELIVERY', 'woocommerce'),
+	$states['PE'] = array( 
 		'SR' =>__('Surco', 'woocommerce'),
 		'MI' =>__('Miraflores', 'woocommerce'),
 		'SB' =>__('San Borja', 'woocommerce'), 
