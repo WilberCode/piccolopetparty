@@ -189,7 +189,15 @@ add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
 /* SINGLE PRODUCT - END */
 
 
-
+/* REMOVE DASHICONS - START */
+add_action( 'wp_print_styles', 'zgwd_dequeue_styles' );
+function zgwd_dequeue_styles() { 
+    if ( ! is_user_logged_in() ) {
+        wp_dequeue_style( 'dashicons' );
+        wp_deregister_style( 'dashicons' );
+    }
+}
+/* REMOVE DASHICONS - END */
 
 
 
