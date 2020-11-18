@@ -44,7 +44,9 @@ get_header( 'shop' );
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 					<h1 class="woocommerce-products-header__title page-title text-center hidden"><?php woocommerce_page_title(); ?></h1>
 				<?php endif; ?>
-				<img src="<?=$brand_banner_src[0]?>" alt="<?php woocommerce_page_title() ?>">
+				<a href="https://api.whatsapp.com/send?phone=+51986832861">
+					<img src="<?=$brand_banner_src[0]?>" alt="<?php woocommerce_page_title() ?>">
+				</a>
 			 </div>
 		</div>
 		<!-- Logo and search form -->
