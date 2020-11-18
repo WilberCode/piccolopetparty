@@ -56,3 +56,25 @@
         }
     }
 }
+
+
+
+/* purgecss start ignore */
+.whatsapp-icon{
+    a{
+        &::after{
+            content: ''; 
+            background-image: url(https://cyberweekmeatfest.feriasdigitales.pe/wp-content/uploads/2020/11/Recurso-1-1.png);
+            background-repeat: no-repeat;
+            background-size: 100%; 
+            @apply inline-block align-middle  ml-2;
+            width:24px ;
+            height:24px; 
+            @screen md{
+               width:45px ;
+               height:45px; 
+            }
+        }
+    }
+}
+/* purgecss end ignore */
