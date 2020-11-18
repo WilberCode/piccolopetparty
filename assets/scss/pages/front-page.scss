@@ -1,0 +1,80 @@
+.marcas{
+    &-item{
+        
+    }
+    &-logo{
+        @apply   w-full ;  
+    }
+    &-image{
+        @apply relative flex justify-center mt-3;
+        @screen maxsm {
+            @apply  block;
+        }
+        img{
+            @apply w-full;
+        }
+        p{
+            @include btn;
+            @apply  font-pigeon tracking-widest absolute bottom-0 mb-10; 
+            @screen maxmd {
+                @apply  mb-5; 
+            }
+            @screen maxsm {
+                @apply w-full px-2 mb-2 relative leading-5;
+                font-size: 0.8rem  ;
+            }
+        }
+    }   
+}
+.legal{
+    letter-spacing: 14px;
+    color: #1D1D1B;
+}
+
+
+.overlay{ 
+    display: none;
+    z-index: 800000;
+    @at-root{
+        body{
+           // overflow-y: hidden;
+        }
+    }
+    &-body{
+        
+    }
+    img{
+        max-width: 758.9146px;
+        @media (max-width:1700px){
+            max-width: 600px; 
+        }
+        @media (max-width:1366px){
+            max-width: 560px; 
+        }
+        @screen maxl{
+             max-width: 500px; 
+        }
+    }
+}
+
+
+
+/* purgecss start ignore */
+.whatsapp-icon{
+    a{
+        &::after{
+            content: ''; 
+            background-image: url(https://cyberweekmeatfest.feriasdigitales.pe/wp-content/uploads/2020/11/Recurso-1-1.png);
+            background-repeat: no-repeat;
+            background-size: 100%; 
+            @apply inline-block align-middle  ml-2;
+            width:24px ;
+            height:24px; 
+            @screen md{
+               width:45px ;
+               height:45px; 
+            }
+        }
+    }
+}
+/* purgecss end ignore */
