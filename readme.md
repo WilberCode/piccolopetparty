@@ -1,4 +1,3 @@
-# Grupo Tendenze Comunicaciones
+# Piccolo Pet Party
 
-## Página web: https://cyberweekmeatfest.tendenzeperu.com
- 
+## Página web: https://piccolopetparty.com/
